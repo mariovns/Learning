@@ -27,6 +27,7 @@ public class StructuredConcurrencyDemo {
         Callable<Integer> c1 = () -> {
             int millis = 1000;
             try{
+//                System.out.println(Instant.now().toEpochMilli()+": First callable getting executed on "+ Thread.currentThread());
                 System.out.println(STR."\{Instant.now().toEpochMilli()}: First callable getting executed on \{Thread.currentThread()}");
                 Thread.sleep(millis);
                 System.out.println(STR."\{Instant.now().toEpochMilli()}: First callable completed on \{Thread.currentThread()}");

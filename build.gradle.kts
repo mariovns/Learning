@@ -17,3 +17,12 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+tasks.withType<JavaCompile> {
+    options.compilerArgs.add("--enable-preview")
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
